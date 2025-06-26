@@ -72,11 +72,12 @@ class ApiService {
 
   private constructor() {
     this.api = axios.create({
-      baseURL: '/api/v1',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
+  baseURL: 'https://blog-platform-springboot-react-production.up.railway.app/api/v1',
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
+
 
     // Add request interceptor for authentication
     this.api.interceptors.request.use(
